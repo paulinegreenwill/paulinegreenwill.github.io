@@ -1,0 +1,18 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+# Quarto internals
+/.quarto/
+/_site/
+# Secrets — NEVER commit
+.Renviron
+.env
+*_secret*
+*.pem
+# Large or private data
+data-raw/
+*.sav
+*.dta
+#

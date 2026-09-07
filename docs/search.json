@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pauline Green-Williams",
+    "section": "",
+    "text": "I am a Masters Student in the Social Data Analytics and Research (SDAR) Program at the University of Texas at Dallas. My research examines rural and under served communities and lack of access."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Pauline Green-Williams",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nSocial Media effects\nLack of access and its effect on Quality of life\nUnder served Communities"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "EPPS 6302 — Methods of Data Collection and Production Fall 2026 · Course materials"
+  },
+  {
+    "objectID": "teaching.html#teaching-assistant",
+    "href": "teaching.html#teaching-assistant",
+    "title": "Teaching",
+    "section": "",
+    "text": "EPPS 6302 — Methods of Data Collection and Production Fall 2026 · Course materials"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download PDF"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Creating Quarto doc & Github Repo  Pauline Green-Williams — under review [PDF] [Code]   A project I have completed was using R analysis and Pearson correlation to determine if there was a strong correlation between hospital emergency access and fatality rates due to COVID-19. During this process I had to use web scraping from the U.S. counties and parishes list, as well as import data from the CDC website, and the bureau of labor statistics. From there I had to modify the data, join the data sets, and perform the pearson correlation test using Rstudio.\nData-generating process. Where these data came from, who produced them,and what was decided in producing them."
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research",
+    "section": "",
+    "text": "Creating Quarto doc & Github Repo  Pauline Green-Williams — under review [PDF] [Code]   A project I have completed was using R analysis and Pearson correlation to determine if there was a strong correlation between hospital emergency access and fatality rates due to COVID-19. During this process I had to use web scraping from the U.S. counties and parishes list, as well as import data from the CDC website, and the bureau of labor statistics. From there I had to modify the data, join the data sets, and perform the pearson correlation test using Rstudio.\nData-generating process. Where these data came from, who produced them,and what was decided in producing them."
+  },
+  {
+    "objectID": "research.html#publications-pauline-green-williams-2026.",
+    "href": "research.html#publications-pauline-green-williams-2026.",
+    "title": "Research",
+    "section": "Publications Pauline Green-Williams (2026).",
+    "text": "Publications Pauline Green-Williams (2026).\n“A Real Title.” Journal, 12(3), 45–67. [DOI"
+  },
+  {
+    "objectID": "teaching.html#guest-lectures",
+    "href": "teaching.html#guest-lectures",
+    "title": "Teaching",
+    "section": "Guest Lectures",
+    "text": "Guest Lectures\n\n“Lecture Title,” EPPS 6302, Fall 2026"
+  },
+  {
+    "objectID": "assign01.html",
+    "href": "assign01.html",
+    "title": "Designing my Website",
+    "section": "",
+    "text": "This website is created using Rstudio Quarto. This is my first time using Quarto but it was fairly easy to follow and understand. The theme I have shown is quartz, which I found online after searching the possible quarto site themes. I chose this theme because it is still aesthetically pleasing without being too distracting or un serious. On the home page you see a picture of me, my name, three helpful links, and a short description on what I am studying and my research interests. On the right hand side you will find a search button which allows someone to quickly jump around and find something specific on my site.\nOn the left hand side you will see the index which holds six tabs. My Home, Research,Teaching, CV, Github, and Email. When creating this website in its YML stage, I struggled with aligning the spacing all together, one space bar was causing the whole page to return nothing, but after reviewing the work and using AI to help highlight the problem I was able to make the necessary changes that allows the site to work. Along with creating this website we also had to create an associated github repository with it.\nI’ve never used GitHub so I was originally confused on it’s purpose, but the github repository is what allows the website to actually be seen over the internet, not just the local host. The github Repository was very easy to understand and use. After creating the original template of the page adding the assignments tab was extremely easy.\nI can see how having this, allows you to expand even further with the site and push the capabilities of what you want to show. My favorite part about designing this website was always updating and rendering the pages as I made changes. it was rewarding to see your hard work pay off almost immediately and kept me engaged and eager to continue on with the project."
+  },
+  {
+    "objectID": "assign01.html#how-did-i-design-this-website",
+    "href": "assign01.html#how-did-i-design-this-website",
+    "title": "Designing my Website",
+    "section": "",
+    "text": "This website is created using Rstudio Quarto. This is my first time using Quarto but it was fairly easy to follow and understand. The theme I have shown is quartz, which I found online after searching the possible quarto site themes. I chose this theme because it is still aesthetically pleasing without being too distracting or un serious. On the home page you see a picture of me, my name, three helpful links, and a short description on what I am studying and my research interests. On the right hand side you will find a search button which allows someone to quickly jump around and find something specific on my site.\nOn the left hand side you will see the index which holds six tabs. My Home, Research,Teaching, CV, Github, and Email. When creating this website in its YML stage, I struggled with aligning the spacing all together, one space bar was causing the whole page to return nothing, but after reviewing the work and using AI to help highlight the problem I was able to make the necessary changes that allows the site to work. Along with creating this website we also had to create an associated github repository with it.\nI’ve never used GitHub so I was originally confused on it’s purpose, but the github repository is what allows the website to actually be seen over the internet, not just the local host. The github Repository was very easy to understand and use. After creating the original template of the page adding the assignments tab was extremely easy.\nI can see how having this, allows you to expand even further with the site and push the capabilities of what you want to show. My favorite part about designing this website was always updating and rendering the pages as I made changes. it was rewarding to see your hard work pay off almost immediately and kept me engaged and eager to continue on with the project."
+  }
+]

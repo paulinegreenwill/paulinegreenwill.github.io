@@ -1,0 +1,65 @@
+---
+title: "WebScraping"
+editor: visual
+---
+
+## Working through Assignment 4
+
+To run this program using my own Wikipedia source I chose a simple one which was the List of countries and dependencies by population. This was an easy enough data set that had good information but was also good for beginning web scraping.
+
+``` r
+robotstxt::paths_allowed("https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population")
+
+wiki_url <- paste0("https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population")
+
+wiki_pg <- read_html(wiki_url)
+```
+
+After that I pulled how many tables the data set had in the case there was more than one like the example code given. In this set there was only one table to pull from. After that I took a glimpse at the dataset that was pulled.
+
+``` r
+tabs <- wiki_pg |> html_elements("table.wikitable")
+length(tabs)                      # how many candidates?
+tabs |> html_table() |> lapply(\(x) dim(x))
+
+totalpopraw <- tabs[[1]] |> html_table()
+glimpse(totalpopraw)
+```
+
+ThenI began to clean the data set. I selected three rows to focus on which were the location, population, and date. I filtered to remove all strings that included the name world and total per the instructions. I also parsed the numbers to turn them from strings into actual numerical values in the data set. Finally we took a look at the new clean data set.
+
+``` r
+otalpop <- totalpopraw |>
+  janitor::clean_names() |>
+  mutate(across(where(is.character),
+                ~ .x |>
+                  str_remove_all("\\[.*?\\]") |>   # [1], [note 2]
+                  str_squish())) |>
+  filter(!str_to_lower(location) %in% c("world", "location"),
+         !str_to_lower(location) %in% c("total", "world total"))
+totalpop <- totalpop |>
+  select(location,population,date)
+totalpop <- totalpop |>
+  mutate(population = readr::parse_number(population))
+glimpse(totalpop)
+head(totalpop)
+write_csv(totalpop, paste0("totalpop_wiki_", Sys.Date(), ".csv"))
+```
+
+## Data Plan
+
+Since I do not have a designated research topic I just researched some possible data sets surrounding Education and Poverty. For our main project we are focusing on Municipal court discussion on funding surrounding the arts programs so I decided to look at data from WWW.census.gov. I am looking at the Small Area Income and Poverty Estimates for state and counties. This will be an API call rather than web scraping because the API is already given to me, which is just the more polite and safer option than web scraping. It also will be more likely that the data set is already configured in a readable way and will not require much manipulation. The robots.txt when ran in Rstudio came back as true which means that it is able to be scraped and used. When I ran the robots.txt on the back of the hyperlink I received a 404 error, but that was because it is a API link and not a webpage link. The Census Bureau allows users to query and retrieve data to analyze. There are limits to what is allowed with the data sets that are related around re-identifying personal information and combining data sets to try and identify participants. None of these limitations apply to what I will be doing with this project. The Census Bureau allows 500 request per data using the API key, but for this data set there will be a relatively low amount of queries because it is not as large as other ones. If I was using a webpage I would know that the page is broken if I tried to run the same functions or commands, and say a variable changed I would not be able to execute my code. Using an API key eliminates the worry that the data set can be randomly changed because it would have to come directly from the Census Bureau. If the link ever stops working that is how I will know that my page is changed and I need to adjust.
+
+``` r
+robotstxt::paths_allowed("https://api.census.gov/data/timeseries/poverty/saipe.html")
+url <- "https://api.census.gov/data/timeseries/poverty/saipe"
+
+response <- request(url) |>
+  req_url_query(
+    get = "NAME,SAEPOVALL_PT,SAEPOVRTALL_PT,SAEMHI_PT",
+    `for` = "state:*",
+    YEAR = 2024,
+    key = api_key
+  ) |>
+  req_perform()
+```

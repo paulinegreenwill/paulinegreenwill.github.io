@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Pauline Green-Williams"
+  description: "Research on rural communities and the health and social impact"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+      - text: Assignments
+        menu:
+             - assign01.qmd
+             - assign02.qmd
+             - Census Assignment.qmd
+             - WebScraping.qmd
+             - GovDataAPI.qmd
+    right:
+    - icon: github
+      href: https://github.com/paulinegreenwill
+    - icon: envelope
+      href: mailto:dal379304@utdallas.edu
+  
+format:
+  html:
+    theme: quartz
+    css: styles.css
+    toc: true
+    editor: visual
+    code-block-bg: true
+    code-block-border-left: "#000"
+
+
+
